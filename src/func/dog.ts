@@ -1,3 +1,6 @@
-export const numberOfColors = (d) => {};
+type Dog = {
+    name: string;
+    color: string;
+}
 
-export const commonColor = (d) => {};
+export default Dog;

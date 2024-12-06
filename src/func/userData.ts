@@ -1,6 +1,6 @@
 import User from "./user";
 
-export const allUsers: User[] = [
+const allUsers: User[] = [
 	{
 		name: "Stina",
 		hobby: ["läsa böcker"],
@@ -27,3 +27,5 @@ export const allUsers: User[] = [
 		age: 17,
 	},
 ];
+
+export default allUsers;

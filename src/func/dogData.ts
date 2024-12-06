@@ -1,4 +1,6 @@
-const dogs = [
+import Dog from "./dog";
+
+const dogs: Dog[] = [
 	{ name: "Nisse", color: "brown" },
 	{ name: "Fiffi", color: "white" },
 	{ name: "Fluffe", color: "black" },

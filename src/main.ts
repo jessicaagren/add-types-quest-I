@@ -6,12 +6,12 @@ import {
 	getAllNoWingedMonster,
 	numberOfMonstersWithWings,
 	prettyPrintMonster,
-} from "./func/monster";
-import { commonColor, numberOfColors } from "./func/dog";
+} from "./func/monster-functions";
 import printSum from "./func/printSum";
-import { allUsers } from "./func/userData";
+import allUsers from "./func/userData";
 import dogs from "./func/dogData";
 import monsters from "./func/monsterData";
+import { numberOfColors } from "./func/dog-functions";
 
 printSum(1, 2);
 printSum(5, 12);
@@ -52,3 +52,7 @@ console.log(
 
 const noWingedMonster = getAllNoWingedMonster(monsters);
 console.log(noWingedMonster);
+function commonColor(dogs: import("./func/dog").default[]) {
+	throw new Error("Function not implemented.");
+}
+
