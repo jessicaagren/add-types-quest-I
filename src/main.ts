@@ -11,10 +11,14 @@ import printSum from "./func/printSum";
 import allUsers from "./func/userData";
 import dogs from "./func/dogData";
 import monsters from "./func/monsterData";
-import { numberOfColors } from "./func/dog-functions";
+import { commonColor, numberOfColors, numberOfColors2, prettyPrintDogs } from "./func/dog-functions";
+
+console.log("================Räknare================");
 
 printSum(1, 2);
 printSum(5, 12);
+
+console.log("================Användare================");
 
 console.log(`Vi har ${allUsers.length} stycken användare.`);
 console.log(`Medelåldern på alla användare är ${averageAge(allUsers)}`);
@@ -28,12 +32,16 @@ console.log(
 	`Den äldsta personen är ${oldestPerson(allUsers)} och den yngsta är ${youngestPerson(allUsers)}.`
 );
 
+console.log("================Hundar================");
+
 console.log(`Vi har ${dogs.length} stycken hundar.`);
 console.log(`Hundarna har ${numberOfColors(dogs)} antal unika färger.`);
 console.log(
 	`Den vanligaste färgen bland alla hundar är: ${commonColor(dogs)}.`
 );
-// vi vill ha en pretty print som skriver ut alla färger som hundarna har och hur många hundar det finns av varje färg
+prettyPrintDogs(dogs);
+
+console.log("================Monster================");
 
 console.log(`Vi har ${monsters.length} stycken monster.`);
 console.log(`Medelåldern på alla monster är ${averageMonsterAge(monsters)}`);
@@ -44,7 +52,7 @@ console.log(
 );
 
 // loopa igenom alla monster och skriv ut dem med prettyPrintMonster
-prettyPrintMonster(monsters[0]);
+prettyPrintMonster(monsters);
 
 console.log(
 	`Antalet monster som har vingar är ${numberOfMonstersWithWings(monsters)}`
@@ -52,7 +60,4 @@ console.log(
 
 const noWingedMonster = getAllNoWingedMonster(monsters);
 console.log(noWingedMonster);
-function commonColor(dogs: import("./func/dog").default[]) {
-	throw new Error("Function not implemented.");
-}
 

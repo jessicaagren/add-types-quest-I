@@ -2,25 +2,25 @@ import User from "./user";
 
 export const averageAge = (a: User[]) => {
 	let allAges = 0;
-	a.forEach((u) => {
-		allAges += u.age;
+	a.forEach((user) => {
+		allAges += user.age;
 	});
 	return allAges / a.length;
 };
 
 export const averageNumberOfHobbies = (a: User[]) => {
-	let AllHobbies = 0;
-	a.forEach((u) => {
-		AllHobbies += u.hobby.length;
+	let allHobbies = 0;
+	a.forEach((user) => {
+		allHobbies += user.hobby.length;
 	});
-	return AllHobbies / a.length;
+	return allHobbies / a.length;
 };
 
 export const maxAmountOfHobbies = (a: User[]) => {
 	let maxHobbies = 0;
-	a.forEach((u) => {
-		if (u.hobby.length > maxHobbies) {
-			maxHobbies = u.hobby.length
+	a.forEach((user) => {
+		if (user.hobby.length > maxHobbies) {
+			maxHobbies = user.hobby.length
 		}		
 	});
 	return maxHobbies;
@@ -28,9 +28,9 @@ export const maxAmountOfHobbies = (a: User[]) => {
 
 export const oldestPerson = (a: User[]) => {
 	let age = 0;
-	a.forEach((u) => {
-		if (u.age > age) {
-			age = u.age
+	a.forEach((user) => {
+		if (user.age > age) {
+			age = user.age
 		}		
 	});
 	return age;
@@ -38,9 +38,9 @@ export const oldestPerson = (a: User[]) => {
 
 export const youngestPerson = (a: User[]) => {
 	let age = Infinity;
-	a.forEach((u) => {
-		if (u.age < age) {
-			age = u.age
+	a.forEach((user) => {
+		if (user.age < age) {
+			age = user.age
 		}		
 	});
 	return age;
