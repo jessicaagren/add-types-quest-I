@@ -78,17 +78,18 @@ export const prettyPrintDogs = (d: Dog[]) => {
     export const commonColor2 = (dogs: Dog[]): string => {
         const colors: string[] = [];
         const amount: number[] = [];
-
         
         dogs.forEach(dog => {
             const index = colors.indexOf(dog.color);
-
+            // Om vi inte har sett färgen innan pushar vi och sätter räknaren till ett
             if (index === -1) {colors.push(dog.color);
             amount.push(1);
+            // Om vi har sett färgen innan räknar vi en till
         } else {
             amount[index]++;
             }
         });
+        
         const maxAmount = Math.max(...amount);
         return colors[amount.indexOf(maxAmount)];
     }
