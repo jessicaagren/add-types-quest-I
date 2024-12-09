@@ -4,6 +4,7 @@ import {
 	averageMonsterAge,
 	averageNumberOfTentacles,
 	getAllNoWingedMonster,
+	getAllNoWingedMonster2,
 	numberOfMonstersWithWings,
 	prettyPrintMonster,
 } from "./func/monster-functions";
@@ -58,7 +59,7 @@ console.log(
 	`Antalet monster som har vingar är ${numberOfMonstersWithWings(monsters)}`
 );
 
-// const noWingedMonster = getAllNoWingedMonster(monsters);
+// const noWingedMonster = getAllNoWingedMonster2(monsters);
 // console.log(noWingedMonster);
 
 getAllNoWingedMonster(monsters);

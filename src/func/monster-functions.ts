@@ -1,6 +1,7 @@
 //utöka så alla egenskaper för monstret skrivs ut
 
 import Monster from "./monster";
+import monsters from "./monsterData";
 
 export const prettyPrintMonster = (m: Monster[]) => {
 	m.forEach(monster => {
@@ -40,5 +41,15 @@ export const getAllNoWingedMonster = (m: Monster[]): void => {
 			console.log(monster);
 		}
 	});
-	// return [];
+};
+
+export const getAllNoWingedMonster2 = (m: Monster[]): object[] => {
+	const allNoWingedMonsters: object[] = [];
+
+	m.forEach(monster => {
+		if (!monster.hasWings){
+			allNoWingedMonsters.push(monster);
+		}
+	});
+	return allNoWingedMonsters;
 };
