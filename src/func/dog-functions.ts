@@ -42,7 +42,7 @@ export const commonColor = (d: Dog[]): string => {
       return commonColorString;
 };
 
-export const prettyPrintDogs = (d: Dog[]) => {
+export const prettyPrintDogs = (d: Dog[]): void => {
     const colorCount: { [color: string]: number } = {};
     
     console.log("Alla färger som hundarna har:");
@@ -89,7 +89,7 @@ export const prettyPrintDogs = (d: Dog[]) => {
             amount[index]++;
             }
         });
-        
+
         const maxAmount = Math.max(...amount);
         return colors[amount.indexOf(maxAmount)];
     }

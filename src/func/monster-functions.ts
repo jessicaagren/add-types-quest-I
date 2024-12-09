@@ -24,10 +24,21 @@ export const averageNumberOfTentacles = (m: Monster[]) => {
 	return Math.floor(allTentacles / m.length);
 };
 
-export const numberOfMonstersWithWings = (m: Monster[]) => {
-	return 0;
+export const numberOfMonstersWithWings = (m: Monster[]): number => {
+	let monstersWithWings = 0;
+
+	m.forEach(monster => {
+		if (monster.hasWings) {monstersWithWings++};
+	})
+	return monstersWithWings;
 };
 
-export const getAllNoWingedMonster = (m: Monster[]) => {
-	return [];
+export const getAllNoWingedMonster = (m: Monster[]): void => {
+	console.log("De monster som inte har vingar är:");
+	m.forEach(monster => {
+		if (!monster.hasWings){
+			console.log(monster);
+		}
+	});
+	// return [];
 };

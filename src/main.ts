@@ -58,6 +58,7 @@ console.log(
 	`Antalet monster som har vingar är ${numberOfMonstersWithWings(monsters)}`
 );
 
-const noWingedMonster = getAllNoWingedMonster(monsters);
-console.log(noWingedMonster);
+// const noWingedMonster = getAllNoWingedMonster(monsters);
+// console.log(noWingedMonster);
 
+getAllNoWingedMonster(monsters);
