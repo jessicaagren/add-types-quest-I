@@ -2,7 +2,7 @@ import Dog from "./dog";
 
 export const numberOfColors = (d: Dog[]): number => {
     const uniqueColors: string[] = [];
-    
+
     d.forEach(dog => {
         let isUnique = true;
         uniqueColors.forEach(color => {
@@ -72,4 +72,23 @@ export const prettyPrintDogs = (d: Dog[]) => {
                 colors.push(dog.color);
         });
         return colors.length;
+    }
+
+    // Den vanligaste färgen enligt Niklas
+    export const commonColor2 = (dogs: Dog[]): string => {
+        const colors: string[] = [];
+        const amount: number[] = [];
+
+        
+        dogs.forEach(dog => {
+            const index = colors.indexOf(dog.color);
+
+            if (index === -1) {colors.push(dog.color);
+            amount.push(1);
+        } else {
+            amount[index]++;
+            }
+        });
+        const maxAmount = Math.max(...amount);
+        return colors[amount.indexOf(maxAmount)];
     }
